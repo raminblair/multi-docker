@@ -10,8 +10,8 @@ script:
   - docker run -e CI=true -t raminblair/react-test npm run test -- --coverage
 
 after_success:
-  -docker build -t raminblair/multi-client ./client
-  -docker build -t raminblair/multi-nginx ./nginx
-  -docker build -t raminblair/multi-server ./server
-  -docker build -t raminblair/multi-worker ./worker
+  - docker build -t raminblair/multi-client ./client
+  - docker build -t raminblair/multi-nginx ./nginx
+  - docker build -t raminblair/multi-server ./server
+  - docker build -t raminblair/multi-worker ./worker
   
